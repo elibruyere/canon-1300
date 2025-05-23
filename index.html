@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="la">
+<head>
+  <meta charset="UTF-8">
+  <title>Analyse Can. 1300</title>
+  <style>
+    body {
+      font-family: serif;
+      line-height: 1.6;
+      padding: 2em;
+      background: #f8f9fa;
+    }
+    .word {
+      cursor: pointer;
+      padding: 0 2px;
+      border-radius: 4px;
+    }
+    .nominative { background-color: #fff59d; }
+    .accusative { background-color: #a5d6a7; }
+    .genitive { background-color: #90caf9; }
+    .dative { background-color: #ffcc80; }
+    .ablative { background-color: #ef9a9a; }
+    #info-box {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background: #333;
+      color: white;
+      padding: 1em;
+      font-size: 0.9em;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <h2>Canon 1300 - Analyse</h2>
+  
+  <p>
+    
+    <span class="word nominative" data-info="Sujet. Tous les biens temporels">Bona temporalia omnia</span> 
+        <span class="word nominative" data-info="Sujet principal. Les volontés">Voluntate</span> 
+        <span class="word genitive" data-info="compément du nom 'volontates' = des fidèles">fidelium</span> 
+        <span class="word accusative" data-info="COD. nom + adjectif à l'accusatif féminin pluriel">facultates suas</span> 
+        <span class="word nominative" data-info="Groupe prépositionnel (in + accusatif, complément de but) = pour des causes pieuses">in pias causas</span> 
+        <span class="word nominative" data-info="">donantium</span> 
+        <span class="word nominative" data-info="">vel</span> 
+        <span class="word nominative" data-info="">relinquentium</span> ,
+        <span class="word nominative" data-info="">sive</span> 
+        <span class="word nominative" data-info="">per actum</span> 
+        <span class="word nominative" data-info="">inter vivos</span> 
+        <span class="word nominative" data-info="">sive</span> 
+        <span class="word nominative" data-info="">per actum</span> 
+        <span class="word nominative" data-info="">mortis</span> 
+        <span class="word nominative" data-info="">causa</span> ,
+        <span class="word nominative" data-info="">legitime</span> 
+        <span class="word nominative" data-info="">acceptatae</span> ,
+        <span class="word nominative" data-info="">diligentissime</span> 
+        <span class="word nominative" data-info="">impleantur</span> 
+        <span class="word nominative" data-info="">etiam</span> 
+        <span class="word nominative" data-info="">circa</span> 
+        <span class="word nominative" data-info="">modum</span> 
+        <span class="word nominative" data-info="">administrationis</span> 
+        <span class="word nominative" data-info="">et</span> 
+        <span class="word nominative" data-info="">erogationis</span> 
+        <span class="word nominative" data-info="">bonorum</span>,
+        <span class="word nominative" data-info="">firmo praescripto</span> 
+        <span class="word nominative" data-info="">can. 1301, § 3</span>.
+  <h3>Traduction</h3>
+    <p>
+     Tous les biens temporels qui appartiennent à l’Église tout entière, au
+Siège Apostolique et aux autres personnes juridiques publiques dans
+l’Église, sont biens ecclésiastiques et sont régis par les canons
+suivants ainsi que par les statuts propres de ces personnes. (= leurs statuts propres)
+    </p>
+    
+ 
+
+  <h3>Note</h3>
+  
+  <p>
+
+    </p>
+
+    <p>
+ 
+  <ul>
+        <li><a href=" https://elibruyere.github.io/Liber-5/">Retour au Livre 5</a></li> 
+        <li><a href="https://elibruyere.github.io/analyses-canoniques/">Retour à la page d'accueil</a></li>    
+  </ul>
+  
+  <div id="info-box"></div>
+
+  <script>
+    const words = document.querySelectorAll('.word');
+    const infoBox = document.getElementById('info-box');
+
+    words.forEach(word => {
+      word.addEventListener('click', () => {
+        infoBox.textContent = word.getAttribute('data-info');
+        infoBox.style.display = 'block';
+      });
+    });
+  </script>
+</body>
+</html>
